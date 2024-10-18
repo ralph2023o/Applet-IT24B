@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
-    <H1>HHEHEHHEHEHEHHE</H1>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Applets
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../Applet-1/index.html">Applet 1</a></li>
+                  <li><a class="dropdown-item" href="../Applet-3/index.html">Applet 2</a></li>
+                  <li><a class="dropdown-item" href="../Applet-3/index.html">Applet 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="applet-container">
+        <h3>Data Structures and Algorithm</h3>
+        <input type="number" id="num1" placeholder="Input your grade here" oninput="updateDisplay()" step="any">
+        <br>
+        <br>
+        <h3>Object Oriented Programming</h3>
+        <input type="number" id="num2" placeholder="Input your grade here" oninput="updateDisplay()"step="any">
+        <br>
+        <br>
+        <h3>Fundamentals of Networking</h3>
+        <input type="number" id="num3" placeholder="Input your grade here" oninput="updateDisplay()" step="any">
+        <br>
+        <br>
+        <h3>Elective 1(Web Systems and Technologies)</h3>
+        <input type="number" id="num4" placeholder="Input your grade here" oninput="updateDisplay()" step="any">
+        <br>
+        <br>
+        <h3>Event Driven Programming</h3>
+        <input type="number" id="num5" placeholder="Input your grade here" oninput="updateDisplay()" step="any">
+        <br>
+        <br>
+        <h3>Multimedia Systems Development</h3>
+        <input type="number"id="num6" placeholder="Input your grade here" oninput="updateDisplay()" step="any">
+        <br>
+        <br>
+        
+       
+
+  
+        <button class="btn btn-primary" onclick="showGwa()">Calculate Gwa</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
