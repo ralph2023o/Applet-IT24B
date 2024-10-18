@@ -46,3 +46,14 @@ class AppletRenderer {
             })
             .catch(error => console.error('Error loading applet data:', error));
     }
+    renderApplets(data) {
+        this.container.innerHTML = '';
+        data.forEach(applet => {
+            const appletCard = new AppletCard(applet.title,applet.icon, applet.description, applet.link);
+            const cardElement = appletCard.createCard();
+            this.container.appendChild(cardElement);
+        });
+
+     
+        this.initializeTooltips();
+    }
