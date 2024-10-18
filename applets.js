@@ -36,3 +36,13 @@ class AppletRenderer {
         this.filteredData = [];
         this.searchInput.addEventListener('input', () => this.filterApplets());
     }
+    fetchAppletData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                this.appletData = data;
+                this.filteredData = data;
+                this.renderApplets(this.filteredData);
+            })
+            .catch(error => console.error('Error loading applet data:', error));
+    }
