@@ -1,0 +1,21 @@
+[
+    {
+      "student_id": 1,
+      "student_name": "Ralph Hope Chavez",
+      "student_program": "BS - Information Technology",
+      "student_enrolled_date": "2023-08-15"
+    },
+    {
+        "student_id": 2,
+        "student_name": "James Fernandez",
+        "student_program": "BS-Aerodynamic",
+        "student_enrolled_date": "1997-12-25"
+      },
+      {
+        "student_id": 3,
+        "student_name": "Clyde Jamir Ali",
+        "student_program": "BS - Information Technology",
+        "student_enrolled_date": "2023-03-10"
+      }
+    ]
+    
