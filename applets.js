@@ -72,3 +72,5 @@ class AppletRenderer {
         this.renderApplets(this.filteredData);
     }
 }
+const appletRenderer = new AppletRenderer('applet-container', 'searchApplet');
+appletRenderer.fetchAppletData('applets.json');
