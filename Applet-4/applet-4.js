@@ -4,6 +4,10 @@ class StudentList {
         this.students = [];
         this.init();
     }
+    async init() {
+        await this.fetchData();
+        this.bindSearchEvent();
+    }
     async fetchData() {
         try {
             const response = await fetch(this.dataUrl);
@@ -18,9 +22,11 @@ class StudentList {
 
         students.forEach(student => {
             studentSearchListContainer.innerHTML += `
-                <p> ${student.student_name}</p>
-                <p class="fw-light"> ${student.student_program} </p>
-                <hr>
+                <p><strong>ID:</strong> ${student.student_id}</p>
+            <p><strong>Name:</strong> ${student.student_name}</p>
+            <p class="fw-light"><strong>Program:</strong> ${student.student_program}</p>
+            <p><strong>Enrolled Date:</strong> ${student.student_enrolled_date}</p>
+            <hr>
             `;
         });
     }
