@@ -28,3 +28,11 @@ class AppletCard {
         return cardDiv;
     }
 }
+class AppletRenderer {
+    constructor(containerId, searchInputId) {
+        this.container = document.getElementById(containerId);
+        this.searchInput = document.getElementById(searchInputId);
+        this.appletData = [];
+        this.filteredData = [];
+        this.searchInput.addEventListener('input', () => this.filterApplets());
+    }
