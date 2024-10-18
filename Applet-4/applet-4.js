@@ -24,3 +24,12 @@ class StudentList {
             `;
         });
     }
+    bindSearchEvent() {
+        const studentSearchBar = document.getElementById('studentSearchBar');
+
+        studentSearchBar.addEventListener('input', () => {
+            this.filterStudents(studentSearchBar.value);
+        });
+
+        this.renderStudentList(this.students);
+    }
