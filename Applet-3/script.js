@@ -32,3 +32,23 @@ class DataLogger {
         console.log(`${name} checked in`);
         this.nameInput.value = '';
     }
+    OutData() {
+        const name = this.nameInput.value.trim();
+
+        if (!name) {
+            alert('Please enter your name.');
+            return;
+        }
+        const index = this.checkedInUsers.indexOf(name); // Find index of name in array
+        if (index === -1) {
+            alert(`${name} is not checked in.`);
+            return;
+        }
+
+        const timestamp = new Date().toLocaleString();
+        this.loggedData.push(`${name} Check Out: ${timestamp}`);
+        this.checkedInUsers.splice(index, 1); 
+        this.updateCardContainer();
+        console.log(`${name} checked out`);
+        this.nameInput.value = '';
+    }
