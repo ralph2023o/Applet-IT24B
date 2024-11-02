@@ -5,9 +5,9 @@ class DataLogger {
         this.clearButton = document.getElementById(clearButtonId);
         this.logCountElement = document.getElementById(logCountId);
         this.outButton = document.getElementById(outButtonId);
-        this.nameInput = document.getElementById(nameInputId); // Add name input
+        this.nameInput = document.getElementById(nameInputId); 
         this.loggedData = [];
-        this.checkedInUsers = []; // Change to an array
+        this.checkedInUsers = [];
 
         this.logButton.addEventListener('click', () => this.logData());
         this.clearButton.addEventListener('click', () => this.clearLogs());
@@ -39,7 +39,7 @@ class DataLogger {
             alert('Please enter your name.');
             return;
         }
-        const index = this.checkedInUsers.indexOf(name); // Find index of name in array
+        const index = this.checkedInUsers.indexOf(name); 
         if (index === -1) {
             alert(`${name} is not checked in.`);
             return;
@@ -54,7 +54,7 @@ class DataLogger {
     }
     clearLogs() {
         this.loggedData = [];
-        this.checkedInUsers = []; // Clear checked-in array
+        this.checkedInUsers = []; 
         this.updateCardContainer();
     }
     updateCardContainer() {
