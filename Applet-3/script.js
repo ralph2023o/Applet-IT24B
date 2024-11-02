@@ -52,3 +52,8 @@ class DataLogger {
         console.log(`${name} checked out`);
         this.nameInput.value = '';
     }
+    clearLogs() {
+        this.loggedData = [];
+        this.checkedInUsers = []; // Clear checked-in array
+        this.updateCardContainer();
+    }
